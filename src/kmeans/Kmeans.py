@@ -42,6 +42,7 @@ def dist_ps_naive(z, X):
         res[0][i] = dist_pp(z, X[i])
     return res
 
+
 # cách này nhanh hơn
 def dist_ps_fast(z, X):
     X2 = np.sum(X * X, 1)
