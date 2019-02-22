@@ -16,6 +16,7 @@ for i in range(len(X_train)):
     X_train_feature.append(feature)
 X_train_feature = np.array(X_train_feature, dtype=np.float32)
 
+
 # cho x_test
 X_test_feature = []
 for i in range(len(X_test)):
@@ -33,7 +34,7 @@ y_pre = model.predict(X_test_feature)
 
 print(accuracy_score(y_test, y_pre))
 
-image = cv2.imread("../../images/photo_3.jpg", 1)
+image = cv2.imread("../../images/photo_2.jpg", 1)
 im_gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 im_blur = cv2.GaussianBlur(im_gray, (5, 5), 0)
 im, thre = cv2.threshold(im_blur, 90, 255, cv2.THRESH_BINARY_INV)
